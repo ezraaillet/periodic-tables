@@ -43,8 +43,8 @@ export default function ReservationForm({ populate }) {
       console.log(formData.reservation_date)
       history.push(`/dashboard?date=${formData.reservation_date}`)
     }catch(e){
-      // setErrors(e.response.data.error)
-      console.log(e);
+      setErrors(e.response.data.error)
+      console.log(e.response);
     }
     
   };

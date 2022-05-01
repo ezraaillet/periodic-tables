@@ -2,7 +2,7 @@ import React from "react";
 import ReservationEntry from "./ReservationEntry";
 
 export default function ReservationTable({ reservations }) {
-    const list = reservations.map((reservation) => <ReservationEntry reservation={reservation}/>);
+    const list = reservations.map((reservation) => <ReservationEntry key={reservation.reservation_id} reservation={reservation}/>);
 
   return (
     <div>
@@ -14,6 +14,7 @@ export default function ReservationTable({ reservations }) {
             <th scope="col">Mobile</th>
             <th scope="col">Time</th>
             <th scope="col">Guests</th>
+            <th scope="col">Status</th>
             <th scope="col">Manage</th>
           </tr>
         </thead>
